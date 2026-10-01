@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Get the Free Ann Arbor First-Time Buyer Guide</title>
+  <title>Free Ann Arbor First-Time Buyer Guide</title>
 
   <style>
     body {
       font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
       margin: 0;
-      padding: 16px;
+      padding: 30px 16px;
       background: #fff;
       color: #1f2933;
     }
@@ -23,18 +23,19 @@
 
     h2 {
       margin: 0 0 6px;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
     }
 
     p.sub {
-      margin: 0 0 16px;
+      margin: 0 0 20px;
       color: #52606d;
+      line-height: 1.5;
     }
 
     label {
       display: block;
       font-size: .9rem;
-      margin: 12px 0 4px;
+      margin: 14px 0 5px;
     }
 
     input[type="text"],
@@ -43,20 +44,21 @@
     select {
       width: 100%;
       box-sizing: border-box;
-      padding: 12px;
+      padding: 13px;
       border: 1px solid #cbd2d9;
       border-radius: 8px;
       font-size: 1rem;
-      background: #fff;
+      background: white;
     }
 
     .consent {
       display: flex;
       gap: 8px;
       align-items: flex-start;
-      font-size: .85rem;
+      margin-top: 18px;
       color: #52606d;
-      margin-top: 14px;
+      font-size: .85rem;
+      line-height: 1.4;
     }
 
     .consent input {
@@ -71,33 +73,15 @@
 
     button {
       width: 100%;
-      margin-top: 16px;
+      margin-top: 18px;
       padding: 14px;
       border: 0;
       border-radius: 8px;
       background: #1d4ed8;
-      color: #fff;
+      color: white;
       font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
-    }
-
-    button:disabled {
-      opacity: .6;
-      cursor: default;
-    }
-
-    #msg {
-      margin-top: 14px;
-      font-size: .95rem;
-    }
-
-    .ok {
-      color: #166534;
-    }
-
-    .err {
-      color: #b91c1c;
     }
 
     .hp {
@@ -119,7 +103,6 @@
     </p>
 
     <form
-      id="f"
       action="https://script.google.com/macros/s/AKfycbxQQuHZCAYGEEVolGpBFYxJRWmCw7G3zDtWwrIk8z1uGkFD5BW4fN64z2dVKWse-EhN-g/exec"
       method="POST"
     >
@@ -162,11 +145,7 @@
 
       <label for="interest">What are you looking for?</label>
 
-      <select
-        id="interest"
-        name="interest"
-        required
-      >
+      <select id="interest" name="interest" required>
         <option value="">Select one</option>
         <option value="Buying a home">Buying a home</option>
         <option value="Selling a home">Selling a home</option>
@@ -174,7 +153,6 @@
         <option value="Just learning">Just learning</option>
       </select>
 
-      <!-- Honeypot: leave this empty -->
       <input
         class="hp"
         type="text"
@@ -202,94 +180,13 @@
 
       </div>
 
-      <button
-        type="submit"
-        id="btn"
-      >
+      <button type="submit">
         Send me the guide
       </button>
-
-      <div
-        id="msg"
-        role="status"
-      ></div>
 
     </form>
 
   </div>
 
-
-  <script>
-
-    const SCRIPT_URL =
-      "https://script.google.com/macros/s/AKfycbxQQuHZCAYGEEVolGpBFYxJRWmCw7G3zDtWwrIk8z1uGkFD5BW4fN64z2dVKWse-EhN-g/exec";
-
-
-    const form = document.getElementById("f");
-    const btn = document.getElementById("btn");
-    const msg = document.getElementById("msg");
-
-
-    form.addEventListener("submit", async (e) => {
-
-      e.preventDefault();
-
-      btn.disabled = true;
-
-      msg.className = "";
-      msg.textContent = "Sending...";
-
-
-      const data = new URLSearchParams(
-        new FormData(form)
-      );
-
-
-      data.set(
-        "consent",
-        document.getElementById("consent").checked
-          ? "yes"
-          : "no"
-      );
-
-
-      try {
-
-        await fetch(
-          SCRIPT_URL,
-          {
-            method: "POST",
-            mode: "no-cors",
-            body: data
-          }
-        );
-
-
-        form.reset();
-
-        msg.className = "ok";
-
-        msg.textContent =
-          "Thanks! Check your inbox (and spam folder) for the guide.";
-
-
-      } catch (err) {
-
-        msg.className = "err";
-
-        msg.textContent =
-          "Something went wrong. Please try again.";
-
-      } finally {
-
-        btn.disabled = false;
-
-      }
-
-    });
-
-  </script>
-
 </body>
-
 </html>
