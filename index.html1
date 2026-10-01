@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ann Arbor First-Time Home Buyer Guide | Lana Smith</title>
+  <meta name="description" content="A practical Ann Arbor first-time home buyer guide covering Michigan property taxes, down payment assistance, closing costs, and the home-buying process.">
+
+  <style>
+    :root{
+      --cream:#f7f5ef;
+      --cream2:#eeece4;
+      --sage:#e8ede5;
+      --green:#123f36;
+      --green2:#174b41;
+      --ink:#17342e;
+      --muted:#68716d;
+      --line:#d9ddd6;
+      --white:#ffffff;
+      --accent:#a85f43;
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      background:var(--cream);
+      color:var(--ink);
+      font-family:Arial, Helvetica, sans-serif;
+      line-height:1.55;
+    }
+
+    a{color:inherit}
+
+    .topbar{
+      height:58px;
+      border-bottom:1px solid #e1dfd8;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 5.5vw;
+      font-size:10px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      color:#59635e;
+      background:var(--cream);
+    }
+
+    .hero{
+      max-width:1120px;
+      margin:0 auto;
+      padding:76px 5.5vw 90px;
+      display:grid;
+      grid-template-columns:1.05fr .75fr;
+      gap:70px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      color:var(--accent);
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-size:10px;
+      font-weight:700;
+      margin-bottom:10px;
+    }
+
+    h1,h2,h3{
+      font-family:Georgia, "Times New Roman", serif;
+      font-weight:500;
+      color:var(--ink);
+    }
+
+    h1{
+      font-size:52px;
+      line-height:1.03;
+      margin:0 0 22px;
+      max-width:650px;
+    }
+
+    .hero-copy{
+      font-size:16px;
+      color:var(--muted);
+      max-width:570px;
+      margin:0 0 28px;
+    }
+
+    .buttons{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .button{
+      display:inline-block;
+      padding:13px 19px;
+      border:1px solid var(--green);
+      text-decoration:none;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.2px;
+      border-radius:3px;
+    }
+
+    .button.primary{
+      background:var(--green);
+      color:white;
+    }
+
+    .button.secondary{
+      background:transparent;
+      color:var(--green);
+    }
+
+    .fineprint{
+      margin-top:25px;
+      color:#8a918d;
+      font-size:10px;
+    }
+
+    .portrait{
+      width:100%;
+      max-width:390px;
+      justify-self:end;
+      aspect-ratio:4/4.65;
+      object-fit:cover;
+      object-position:center top;
+      border-radius:50% 50% 3px 3px;
+      display:block;
+    }
+
+    section{
+      padding:82px 5.5vw;
+    }
+
+    .narrow{
+      max-width:980px;
+      margin:0 auto;
+    }
+
+    .intro{
+      background:var(--cream);
+      border-top:1px solid #eceae3;
+    }
+
+    .intro-grid{
+      display:grid;
+      grid-template-columns:.85fr 1.4fr;
+      gap:80px;
+      align-items:start;
+    }
+
+    h2{
+      font-size:29px;
+      line-height:1.15;
+      margin:0 0 16px;
+    }
+
+    .section-text{
+      color:var(--muted);
+      font-size:14px;
+      max-width:650px;
+    }
+
+    .essentials{
+      background:var(--sage);
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:32px;
+    }
+
+    .card{
+      background:white;
+      border:1px solid #e0e4de;
+      border-radius:4px;
+      overflow:hidden;
+    }
+
+    .card-top{
+      height:125px;
+      background:#dfe5df;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#7a8580;
+      font-size:11px;
+      text-align:center;
+      padding:15px;
+    }
+
+    .card-body{
+      padding:18px;
+    }
+
+    .card h3{
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:14px;
+      font-weight:700;
+      margin:0 0 8px;
+    }
+
+    .card p{
+      font-size:12px;
+      color:var(--muted);
+      margin:0;
+    }
+
+    .dark{
+      background:var(--green);
+      color:white;
+    }
+
+    .dark h2,
+    .dark h3,
+    .dark .eyebrow{
+      color:white;
+    }
+
+    .dark .eyebrow{
+      color:#d8b19d;
+    }
+
+    .dark .section-text,
+    .dark p{
+      color:#d8dfdc;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:70px;
+      align-items:start;
+    }
+
+    .example{
+      background:var(--cream);
+      color:var(--ink);
+      padding:28px;
+      border-radius:4px;
+    }
+
+    .example .eyebrow{
+      color:var(--accent);
+    }
+
+    .example h3{
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:22px;
+      margin:0 0 12px;
+    }
+
+    .example strong{
+      font-size:20px;
+    }
+
+    .example p{
+      color:#5e6763;
+      font-size:13px;
+    }
+
+    .roadmap{
+      background:var(--cream);
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:0 45px;
+      margin-top:28px;
+    }
+
+    .step{
+      border-top:1px solid var(--line);
+      padding:15px 0;
+      display:grid;
+      grid-template-columns:32px 1fr;
+      gap:8px;
+      font-size:13px;
+    }
+
+    .number{
+      color:var(--accent);
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:1px;
+    }
+
+    .budget{
+      background:var(--cream2);
+    }
+
+    .budget ul{
+      margin:0;
+      padding-left:20px;
+      color:#5d6662;
+      font-size:13px;
+    }
+
+    .questions{
+      background:var(--cream);
+    }
+
+    .questions-list{
+      margin-top:25px;
+      border-top:1px solid var(--line);
+    }
+
+    .question{
+      padding:13px 0;
+      border-bottom:1px solid var(--line);
+      font-size:13px;
+    }
+
+    .form-section{
+      background:var(--sage);
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr .8fr;
+      gap:70px;
+      align-items:center;
+    }
+
+    .form-card{
+      background:white;
+      padding:28px;
+      border-radius:4px;
+      box-shadow:0 8px 30px rgba(18,63,54,.08);
+    }
+
+    label{
+      display:block;
+      font-size:11px;
+      font-weight:700;
+      margin:13px 0 6px;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    select{
+      width:100%;
+      padding:12px;
+      border:1px solid #ccd3cd;
+      border-radius:3px;
+      background:white;
+      font:inherit;
+      font-size:13px;
+      color:var(--ink);
+    }
+
+    input:focus,select:focus{
+      outline:none;
+      border-color:var(--green);
+    }
+
+    .name-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+
+    .consent{
+      display:flex;
+      align-items:flex-start;
+      gap:8px;
+      margin-top:15px;
+    }
+
+    .consent input{
+      margin-top:3px;
+      flex-shrink:0;
+    }
+
+    .consent label{
+      margin:0;
+      font-size:10px;
+      line-height:1.45;
+      color:#68716d;
+      font-weight:400;
+    }
+
+    .submit{
+      width:100%;
+      border:0;
+      background:var(--green);
+      color:white;
+      padding:14px;
+      margin-top:18px;
+      border-radius:3px;
+      font-size:12px;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .submit:hover{
+      background:var(--green2);
+    }
+
+    .hp{
+      position:absolute;
+      left:-9999px;
+    }
+
+    .contact{
+      background:var(--green);
+      color:white;
+      text-align:center;
+      padding:78px 5.5vw;
+    }
+
+    .contact h2{color:white}
+
+    .contact p{
+      color:#d8dfdc;
+      max-width:620px;
+      margin:0 auto 20px;
+      font-size:13px;
+    }
+
+    .contact-info{
+      font-size:11px;
+      line-height:2;
+      color:#e2e7e5;
+    }
+
+    .contact .button{
+      margin-top:18px;
+      background:white;
+      color:var(--green);
+      border-color:white;
+    }
+
+    footer{
+      background:var(--cream);
+      padding:22px 5.5vw;
+      color:#777f7b;
+      font-size:9px;
+      line-height:1.5;
+      text-align:center;
+    }
+
+    @media(max-width:800px){
+      .topbar{
+        padding:0 22px;
+      }
+
+      .hero,
+      .intro-grid,
+      .two-col,
+      .form-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding-top:50px;
+        gap:35px;
+      }
+
+      .portrait{
+        justify-self:center;
+        max-width:320px;
+      }
+
+      h1{
+        font-size:41px;
+      }
+
+      .cards{
+        grid-template-columns:1fr;
+      }
+
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .form-grid{
+        gap:35px;
+      }
+    }
+
+    @media(max-width:500px){
+      section{
+        padding:60px 24px;
+      }
+
+      .topbar{
+        font-size:8px;
+        letter-spacing:1.3px;
+      }
+
+      h1{
+        font-size:36px;
+      }
+
+      .name-row{
+        grid-template-columns:1fr;
+        gap:0;
+      }
+
+      .form-card{
+        padding:22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <span>Lana Smith</span>
+    <span>Ann Arbor, Michigan</span>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="eyebrow">A local guide to your first home</div>
+        <h1>The Ann Arbor First-Time Home Buyer Guide</h1>
+
+        <p class="hero-copy">
+          Michigan-specific answers on property taxes, down payment help, and closing costs. A practical guide for first-time buyers in Ann Arbor and surrounding areas.
+        </p>
+
+        <div class="buttons">
+          <a class="button primary" href="#guide-form">Get the free guide</a>
+          <a class="button secondary" href="#roadmap">Talk through your options</a>
+        </div>
+
+        <div class="fineprint">
+          Guidance from Lana Smith · Keller Williams
+        </div>
+      </div>
+
+      <img class="portrait" src="lana.jpg" alt="Lana Smith">
+    </section>
+
+
+    <!-- INTRO -->
+    <section class="intro">
+      <div class="narrow intro-grid">
+        <div>
+          <div class="eyebrow">Start with the local picture</div>
+        </div>
+
+        <div>
+          <h2>National advice only tells part of the story.</h2>
+          <p class="section-text">
+            Buying your first home in Michigan brings questions that a general checklist may miss. Property-tax uncapping can change your monthly budget after a sale, while down-payment assistance may change the cash you need up front. Here is a clearer place to start.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ESSENTIALS -->
+    <section class="essentials">
+      <div class="narrow">
+        <div class="eyebrow">The essentials</div>
+        <h2>What you'll learn</h2>
+
+        <div class="cards">
+          <div class="card">
+            <div class="card-top">MICHIGAN PROPERTY TAXES</div>
+            <div class="card-body">
+              <h3>Property-tax uncapping</h3>
+              <p>Why the seller's current bill may not reflect what you pay after buying the home.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-top">DOWN PAYMENT HELP</div>
+            <div class="card-body">
+              <h3>Down-payment assistance</h3>
+              <p>Questions to ask a participating lender about Michigan programs.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-top">CLOSING COSTS</div>
+            <div class="card-body">
+              <h3>Your closing roadmap</h3>
+              <p>A practical path from pre-approval to the paperwork after closing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TAXES -->
+    <section class="dark">
+      <div class="narrow two-col">
+        <div>
+          <div class="eyebrow">The Michigan tax surprise</div>
+          <h2>Budget for the tax bill after the sale.</h2>
+
+          <p class="section-text">
+            A property's tax bill is based on taxable value multiplied by the local millage rate. Under Proposal A, taxable value can generally rise only by the lesser of 5% or inflation each year. When a home sells, the cap is lifted and the taxable value resets based on the home's SEV in the year after the sale.
+          </p>
+
+          <p class="section-text">
+            The previous owner's lower tax bill does not simply transfer to the buyer. Plan for the post-purchase tax estimate when building your budget.
+          </p>
+        </div>
+
+        <div class="example">
+          <div class="eyebrow">Illustration only</div>
+          <h3>What a $400,000 purchase might look like</h3>
+          <p>
+            Approximate SEV / new taxable value: about $200,000
+          </p>
+          <p>
+            Illustrative millage: 40 mills (0.040)
+          </p>
+          <p>
+            <strong>Estimated annual tax: about $8,000</strong><br>
+            about $667 per month
+          </p>
+          <p>
+            Millage rates vary by address. Confirm the local tax estimate before making decisions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- AFTER CLOSING -->
+    <section>
+      <div class="narrow two-col">
+        <div>
+          <div class="eyebrow">After you get the keys</div>
+          <h2>Two things to do after closing</h2>
+        </div>
+
+        <div>
+          <p class="section-text">
+            <strong>1. File the Property Transfer Affidavit</strong><br>
+            Submit Form L-4260 to the local assessor within 45 days of the transfer.
+          </p>
+
+          <p class="section-text">
+            <strong>2. Apply for your Principal Residence Exemption</strong><br>
+            If this is your primary residence, ask about Form 2368 and the current filing deadline.
+          </p>
+
+          <p class="section-text">
+            Confirm current filing rules with your local assessor.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- DPA -->
+    <section class="essentials">
+      <div class="narrow two-col">
+        <div>
+          <div class="eyebrow">Help with up-front costs</div>
+          <h2>Explore Michigan down-payment assistance.</h2>
+          <p class="section-text">
+            Ask a participating lender about MSHDA MI Home Loan and MI $10K DPA. Programs can help with down payment and closing costs, subject to current eligibility rules.
+          </p>
+        </div>
+
+        <div>
+          <p class="section-text">
+            The assistance is typically a 0% second mortgage with no monthly payment, repaid when the home is sold, refinanced, or paid off.
+          </p>
+
+          <p class="section-text">
+            Requirements can include income limits, credit requirements, purchase-price limits, a minimum contribution, homebuyer education, and liquid-asset limits. Ann Arbor homes can run above MSHDA price limits, so ask early whether the homes you are considering qualify.
+          </p>
+
+          <p class="section-text">
+            Also ask about MI Home Loan Flex, Mortgage Credit Certificates, and local, bank, or employer programs. Program rules, limits, and deadlines change, so confirm current terms.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ROADMAP -->
+    <section class="roadmap" id="roadmap">
+      <div class="narrow">
+        <div class="eyebrow">Step by step</div>
+        <h2>Your first-time buyer roadmap</h2>
+
+        <div class="steps">
+          <div class="step"><span class="number">01</span><span>Check your credit and gather two years of income documents.</span></div>
+          <div class="step"><span class="number">02</span><span>Talk to a lender early and get pre-approved.</span></div>
+          <div class="step"><span class="number">03</span><span>Complete a homebuyer education course if you're using MSHDA.</span></div>
+          <div class="step"><span class="number">04</span><span>Understand the written buyer agreement and compensation before signing.</span></div>
+          <div class="step"><span class="number">05</span><span>Shop for homes using your budget, including the uncapped property-tax estimate.</span></div>
+          <div class="step"><span class="number">06</span><span>Make an offer and open escrow with earnest money.</span></div>
+          <div class="step"><span class="number">07</span><span>Get inspections and consider radon, sewer line, lead paint, or foundation checks when appropriate.</span></div>
+          <div class="step"><span class="number">08</span><span>Review the Seller's Disclosure Statement.</span></div>
+          <div class="step"><span class="number">09</span><span>Complete appraisal, underwriting, final walk-through, and closing.</span></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BUDGET -->
+    <section class="budget">
+      <div class="narrow two-col">
+        <div>
+          <div class="eyebrow">The full cash picture</div>
+          <h2>Budget for more than the down payment.</h2>
+        </div>
+
+        <div>
+          <ul>
+            <li>Closing costs, typically around 2–5% of the purchase price</li>
+            <li>Earnest money deposit</li>
+            <li>Inspection and appraisal fees</li>
+            <li>Prepaid taxes, insurance, and escrow reserves</li>
+            <li>Moving costs and immediate repairs</li>
+          </ul>
+
+          <p class="section-text">
+            Michigan transfer taxes are customarily paid by the seller, but who pays what is negotiable and should be stated in the contract.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- QUESTIONS -->
+    <section class="questions">
+      <div class="narrow">
+        <div class="eyebrow">Bring these to the conversation</div>
+        <h2>Questions to ask</h2>
+
+        <div class="questions-list">
+          <div class="question">What will my monthly payment be with uncapped property taxes?</div>
+          <div class="question">Do I qualify for MSHDA programs?</div>
+          <div class="question">What are my total cash needs at closing?</div>
+          <div class="question">Can the seller contribute to closing costs?</div>
+          <div class="question">What happens if the appraisal comes in low?</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FORM -->
+    <section class="form-section" id="guide-form">
+      <div class="narrow form-grid">
+
+        <div>
+          <div class="eyebrow">Start here</div>
+          <h2>Get the free guide.</h2>
+
+          <p class="section-text">
+            The guide is right here on this page. Share your details if you'd like Lana to follow up and help you talk through your next steps.
+          </p>
+        </div>
+
+        <div class="form-card">
+
+          <form
+            action="https://script.google.com/macros/s/AKfycbxQQuHZCAYGEEVolGpBFYxJRWmCw7G3zDtWwrIk8z1uGkFD5BW4fN64z2dVKWse-EhN-g/exec"
+            method="POST"
+          >
+
+            <div class="name-row">
+              <div>
+                <label for="name">First name</label>
+                <input type="text" id="name" name="name" autocomplete="given-name" required>
+              </div>
+
+              <div>
+                <label for="lastName">Last name</label>
+                <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
+              </div>
+            </div>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+
+            <label for="interest">What are you looking for?</label>
+            <select id="interest" name="interest" required>
+              <option value="">Select one</option>
+              <option value="Buying a home">Buying a home</option>
+              <option value="Selling a home">Selling a home</option>
+              <option value="Investing">Investing</option>
+              <option value="Just learning">Just learning</option>
+            </select>
+
+            <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="consent">
+              <input type="checkbox" id="consent" name="consent" value="yes" required>
+              <label for="consent">
+                I agree to be contacted by Lana Smith | Keller Williams Ann Arbor about my home-buying goals and to receive the requested guide. I can unsubscribe from future marketing emails at any time.
+              </label>
+            </div>
+
+            <button class="submit" type="submit">Send me the guide</button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact">
+      <div class="eyebrow">A local conversation</div>
+      <h2>Ready to talk through your options?</h2>
+
+      <p>
+        Lana helps first-time buyers in Ann Arbor and the surrounding area understand their real budget and find the right home.
+      </p>
+
+      <div class="contact-info">
+        Lana Smith | Keller Williams Ann Arbor<br>
+        734-433-8502 · lana.smith@kw.com
+      </div>
+
+      <a class="button" href="mailto:lana.smith@kw.com">Talk with Lana</a>
+    </section>
+
+  </main>
+
+  <footer>
+    This guide is general information, not legal, tax, or financial advice. Program rules, limits, and deadlines change, so confirm details with a participating lender, your local assessor, or the Michigan State Housing Development Authority (MSHDA) before making decisions.
+  </footer>
+
+</body>
+</html>
