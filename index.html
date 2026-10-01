@@ -25,19 +25,41 @@
   <h2>Free Ann Arbor First-Time Buyer Guide</h2>
   <p class="sub">Property tax uncapping, down payment help, and what to expect. We'll email it to you.</p>
 
-  <form id="f">
+ <form id="f">
     <label for="name">First name</label>
     <input type="text" id="name" name="name" autocomplete="given-name" required>
 
+    <label for="lastName">Last name</label>
+    <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
+
     <label for="email">Email</label>
     <input type="email" id="email" name="email" autocomplete="email" required>
+
+    <label for="phone">Phone number</label>
+    <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+
+    <label for="interest">What are you looking for?</label>
+    <select id="interest" name="interest" required>
+      <option value="">Select one</option>
+      <option value="Buying a home">Buying a home</option>
+      <option value="Selling a home">Selling a home</option>
+      <option value="Investing">Investing</option>
+      <option value="Just learning">Just learning</option>
+    </select>
 
     <!-- honeypot: leave empty -->
     <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
 
     <div class="consent">
-      <input type="checkbox" id="consent" required>
-      <label for="consent" style="margin:0">Yes, email me the guide and occasional Ann Arbor home buying updates from [Your Business Name]. I can unsubscribe anytime.</label>
+      <input type="checkbox" id="consent" name="consent" value="yes" required>
+      <label for="consent">
+        I agree to be contacted by Lana Smith | Keller Williams Ann Arbor about my home-buying goals and to receive the requested guide. I can unsubscribe from future marketing emails at any time.
+      </label>
+    </div>
+
+    <button type="submit">Send me the guide</button>
+</form>
+      <label for="consent" style="margin:0">Yes, email me the guide and occasional Ann Arbor home buying updates from from Lana Smith | Keller Williams Ann Arbor. I can unsubscribe anytime.</label>
     </div>
 
     <button type="submit" id="btn">Send me the guide</button>
