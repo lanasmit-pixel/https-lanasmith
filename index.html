@@ -48,23 +48,19 @@
     </select>
 
     <!-- honeypot: leave empty -->
-    <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+   <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-    <div class="consent">
-      <input type="checkbox" id="consent" name="consent" value="yes" required>
-      <label for="consent">
-        I agree to be contacted by Lana Smith | Keller Williams Ann Arbor about my home-buying goals and to receive the requested guide. I can unsubscribe from future marketing emails at any time.
-      </label>
-    </div>
+<div class="consent">
+  <input type="checkbox" id="consent" name="consent" value="yes" required>
+  <label for="consent" style="margin:0">
+    I agree to be contacted by Lana Smith | Keller Williams Ann Arbor about my home-buying goals and to receive the requested guide. I can unsubscribe from future marketing emails at any time.
+  </label>
+</div>
 
-    <button type="submit">Send me the guide</button>
+<button type="submit" id="btn">Send me the guide</button>
+
+<div id="msg" role="status"></div>
 </form>
-      <label for="consent" style="margin:0">Yes, email me the guide and occasional Ann Arbor home buying updates from from Lana Smith | Keller Williams Ann Arbor. I can unsubscribe anytime.</label>
-    </div>
-
-    <button type="submit" id="btn">Send me the guide</button>
-    <div id="msg" role="status"></div>
-  </form>
 </div>
 
 <script>
