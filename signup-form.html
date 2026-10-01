@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get the Free Ann Arbor First-Time Buyer Guide</title>
+<style>
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; padding: 16px; background: #fff; color: #1f2933; }
+  .card { max-width: 440px; margin: 0 auto; }
+  h2 { margin: 0 0 6px; font-size: 1.4rem; }
+  p.sub { margin: 0 0 16px; color: #52606d; }
+  label { display: block; font-size: .9rem; margin: 12px 0 4px; }
+  input[type=text], input[type=email] { width: 100%; box-sizing: border-box; padding: 12px; border: 1px solid #cbd2d9; border-radius: 8px; font-size: 1rem; }
+  .consent { display: flex; gap: 8px; align-items: flex-start; font-size: .85rem; color: #52606d; margin-top: 14px; }
+  .consent input { margin-top: 3px; }
+  button { width: 100%; margin-top: 16px; padding: 14px; border: 0; border-radius: 8px; background: #1d4ed8; color: #fff; font-size: 1rem; font-weight: 600; cursor: pointer; }
+  button:disabled { opacity: .6; cursor: default; }
+  #msg { margin-top: 14px; font-size: .95rem; }
+  .ok { color: #166534; } .err { color: #b91c1c; }
+  .hp { position: absolute; left: -9999px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h2>Free Ann Arbor First-Time Buyer Guide</h2>
+  <p class="sub">Property tax uncapping, down payment help, and what to expect. We'll email it to you.</p>
+
+  <form id="f">
+    <label for="name">First name</label>
+    <input type="text" id="name" name="name" autocomplete="given-name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" autocomplete="email" required>
+
+    <!-- honeypot: leave empty -->
+    <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <div class="consent">
+      <input type="checkbox" id="consent" required>
+      <label for="consent" style="margin:0">Yes, email me the guide and occasional Ann Arbor home buying updates from [Your Business Name]. I can unsubscribe anytime.</label>
+    </div>
+
+    <button type="submit" id="btn">Send me the guide</button>
+    <div id="msg" role="status"></div>
+  </form>
+</div>
+
+<script>
+  // PASTE your Apps Script Web App URL here (ends in /exec)
+  const SCRIPT_URL = 'PASTE_YOUR_WEB_APP_URL_HERE'; <form
+  action="https://script.google.com/macros/s/AKfycbxQQuHZCAYGEEVolGpBFYxJRWmCw7G3zDtWwrIk8z1uGkFD5BW4fN64z2dVKWse-EhN-g/exec"
+  method="POST"
+>
+
+  const form = document.getElementById('f');
+  const btn  = document.getElementById('btn');
+  const msg  = document.getElementById('msg');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    btn.disabled = true;
+    msg.className = ''; msg.textContent = 'Sending...';
+
+    const data = new URLSearchParams(new FormData(form));
+    data.set('consent', document.getElementById('consent').checked ? 'yes' : 'no');
+
+    try {
+      // no-cors: the request is sent; the response can't be read, so we assume success
+      await fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data });
+      form.reset();
+      msg.className = 'ok';
+      msg.textContent = 'Thanks! Check your inbox (and spam folder) for the guide.';
+    } catch (err) {
+      msg.className = 'err';
+      msg.textContent = 'Something went wrong. Please try again.';
+    } finally {
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
