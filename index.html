@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,17 +8,20 @@
   <meta name="description" content="A practical Ann Arbor first-time home buyer guide covering Michigan property taxes, down payment assistance, closing costs, and the home-buying process.">
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
     :root{
-      --cream:#f7f5ef;
-      --cream2:#eeece4;
-      --sage:#e8ede5;
-      --green:#123f36;
-      --green2:#174b41;
-      --ink:#17342e;
-      --muted:#68716d;
-      --line:#d9ddd6;
-      --white:#ffffff;
-      --accent:#a85f43;
+      --cream:#fbf8f2;
+      --cream2:#f8f3eb;
+      --beige:#f3eee6;
+      --sand:#e8ddd0;
+      --taupe:#b7ada2;
+      --brown:#6e665e;
+      --ink:#625c55;
+      --muted:#766f68;
+      --line:#e5ded5;
+      --white:#fffdfa;
+      --accent:#a79a8d;
     }
 
     *{box-sizing:border-box}
@@ -28,33 +32,33 @@
       margin:0;
       background:var(--cream);
       color:var(--ink);
-      font-family:Arial, Helvetica, sans-serif;
-      line-height:1.55;
+      font-family:'DM Sans', sans-serif;
+      line-height:1.6;
     }
 
     a{color:inherit}
 
     .topbar{
       height:58px;
-      border-bottom:1px solid #e1dfd8;
+      border-bottom:1px solid var(--line);
       display:flex;
       align-items:center;
       justify-content:space-between;
       padding:0 5.5vw;
-      font-size:10px;
+      font-size:12px;
       letter-spacing:2px;
       text-transform:uppercase;
-      color:#59635e;
+      color:#7c6c61;
       background:var(--cream);
     }
 
     .hero{
       max-width:1120px;
       margin:0 auto;
-      padding:76px 5.5vw 90px;
+      padding:92px 5.5vw 110px;
       display:grid;
       grid-template-columns:1.05fr .75fr;
-      gap:70px;
+      gap:85px;
       align-items:center;
     }
 
@@ -62,26 +66,26 @@
       color:var(--accent);
       text-transform:uppercase;
       letter-spacing:2px;
-      font-size:10px;
+      font-size:12px;
       font-weight:700;
       margin-bottom:10px;
     }
 
     h1,h2,h3{
-      font-family:Georgia, "Times New Roman", serif;
-      font-weight:500;
+      font-family:'Cormorant Garamond', serif;
+      font-weight:600;
       color:var(--ink);
     }
 
     h1{
-      font-size:52px;
+      font-size:66px;
       line-height:1.03;
       margin:0 0 22px;
       max-width:650px;
     }
 
     .hero-copy{
-      font-size:16px;
+      font-size:20px;
       color:var(--muted);
       max-width:570px;
       margin:0 0 28px;
@@ -96,33 +100,33 @@
     .button{
       display:inline-block;
       padding:13px 19px;
-      border:1px solid var(--green);
+      border:1px solid var(--brown);
       text-decoration:none;
-      font-size:12px;
+      font-size:18px;
       font-weight:700;
       letter-spacing:.2px;
       border-radius:3px;
     }
 
     .button.primary{
-      background:var(--green);
-      color:white;
+      background:var(--brown);
+      color:var(--white);
     }
 
     .button.secondary{
       background:transparent;
-      color:var(--green);
+      color:var(--brown);
     }
 
     .fineprint{
       margin-top:25px;
-      color:#8a918d;
+      color:#9b938a;
       font-size:10px;
     }
 
     .portrait{
       width:100%;
-      max-width:390px;
+      max-width:430px;
       justify-self:end;
       aspect-ratio:4/4.65;
       object-fit:cover;
@@ -132,7 +136,7 @@
     }
 
     section{
-      padding:82px 5.5vw;
+      padding:105px 5.5vw;
     }
 
     .narrow{
@@ -142,30 +146,30 @@
 
     .intro{
       background:var(--cream);
-      border-top:1px solid #eceae3;
+      border-top:1px solid var(--line);
     }
 
     .intro-grid{
       display:grid;
       grid-template-columns:.85fr 1.4fr;
-      gap:80px;
+      gap:95px;
       align-items:start;
     }
 
     h2{
-      font-size:29px;
+      font-size:38px;
       line-height:1.15;
       margin:0 0 16px;
     }
 
     .section-text{
       color:var(--muted);
-      font-size:14px;
+      font-size:18px;
       max-width:650px;
     }
 
     .essentials{
-      background:var(--sage);
+      background:var(--beige);
     }
 
     .cards{
@@ -176,20 +180,20 @@
     }
 
     .card{
-      background:white;
-      border:1px solid #e0e4de;
+      background:var(--white);
+      border:1px solid var(--line);
       border-radius:4px;
       overflow:hidden;
     }
 
     .card-top{
       height:125px;
-      background:#dfe5df;
+      background:#eee8df;
       display:flex;
       align-items:center;
       justify-content:center;
-      color:#7a8580;
-      font-size:11px;
+      color:#8f877f;
+      font-size:13px;
       text-align:center;
       padding:15px;
     }
@@ -199,42 +203,41 @@
     }
 
     .card h3{
-      font-family:Arial, Helvetica, sans-serif;
-      font-size:14px;
+      font-family:'DM Sans', sans-serif;
+      font-size:16px;
       font-weight:700;
       margin:0 0 8px;
     }
 
     .card p{
-      font-size:12px;
+      font-size:16px;
       color:var(--muted);
       margin:0;
     }
 
     .dark{
-      background:var(--green);
-      color:white;
+      background:var(--cream2);
+      color:var(--ink);
     }
 
     .dark h2,
-    .dark h3,
-    .dark .eyebrow{
-      color:white;
+    .dark h3{
+      color:var(--ink);
     }
 
     .dark .eyebrow{
-      color:#d8b19d;
+      color:var(--accent);
     }
 
     .dark .section-text,
     .dark p{
-      color:#d8dfdc;
+      color:var(--muted);
     }
 
     .two-col{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:70px;
+      gap:85px;
       align-items:start;
     }
 
@@ -250,8 +253,8 @@
     }
 
     .example h3{
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:22px;
+      font-family:'Cormorant Garamond', serif;
+      font-size:24px;
       margin:0 0 12px;
     }
 
@@ -260,8 +263,8 @@
     }
 
     .example p{
-      color:#5e6763;
-      font-size:13px;
+      color:var(--muted);
+      font-size:17px;
     }
 
     .roadmap{
@@ -281,7 +284,7 @@
       display:grid;
       grid-template-columns:32px 1fr;
       gap:8px;
-      font-size:13px;
+      font-size:17px;
     }
 
     .number{
@@ -292,14 +295,14 @@
     }
 
     .budget{
-      background:var(--cream2);
+      background:#f1ece4;
     }
 
     .budget ul{
       margin:0;
       padding-left:20px;
-      color:#5d6662;
-      font-size:13px;
+      color:var(--muted);
+      font-size:17px;
     }
 
     .questions{
@@ -314,30 +317,30 @@
     .question{
       padding:13px 0;
       border-bottom:1px solid var(--line);
-      font-size:13px;
+      font-size:17px;
     }
 
     .form-section{
-      background:var(--sage);
+      background:var(--beige);
     }
 
     .form-grid{
       display:grid;
       grid-template-columns:1fr .8fr;
-      gap:70px;
+      gap:85px;
       align-items:center;
     }
 
     .form-card{
-      background:white;
+      background:var(--white);
       padding:28px;
       border-radius:4px;
-      box-shadow:0 8px 30px rgba(18,63,54,.08);
+      box-shadow:0 8px 30px rgba(117,91,67,.08);
     }
 
     label{
       display:block;
-      font-size:11px;
+      font-size:13px;
       font-weight:700;
       margin:13px 0 6px;
     }
@@ -348,17 +351,17 @@
     select{
       width:100%;
       padding:12px;
-      border:1px solid #ccd3cd;
+      border:1px solid #ddd7ce;
       border-radius:3px;
-      background:white;
+      background:var(--white);
       font:inherit;
-      font-size:13px;
+      font-size:17px;
       color:var(--ink);
     }
 
     input:focus,select:focus{
       outline:none;
-      border-color:var(--green);
+      border-color:var(--brown);
     }
 
     .name-row{
@@ -383,25 +386,25 @@
       margin:0;
       font-size:10px;
       line-height:1.45;
-      color:#68716d;
+      color:#8d877f;
       font-weight:400;
     }
 
     .submit{
       width:100%;
       border:0;
-      background:var(--green);
-      color:white;
+      background:var(--brown);
+      color:var(--white);
       padding:14px;
       margin-top:18px;
       border-radius:3px;
-      font-size:12px;
+      font-size:16px;
       font-weight:700;
       cursor:pointer;
     }
 
     .submit:hover{
-      background:var(--green2);
+      background:#8e857d;
     }
 
     .hp{
@@ -410,41 +413,90 @@
     }
 
     .contact{
-      background:var(--green);
-      color:white;
+      background:var(--beige);
+      color:var(--ink);
       text-align:center;
       padding:78px 5.5vw;
     }
 
-    .contact h2{color:white}
+    .contact h2{color:var(--ink)}
 
     .contact p{
-      color:#d8dfdc;
+      color:var(--muted);
       max-width:620px;
       margin:0 auto 20px;
-      font-size:13px;
+      font-size:17px;
     }
 
     .contact-info{
       font-size:11px;
       line-height:2;
-      color:#e2e7e5;
+      color:var(--muted);
     }
 
     .contact .button{
       margin-top:18px;
-      background:white;
-      color:var(--green);
-      border-color:white;
+      background:var(--white);
+      color:var(--ink);
+      border-color:var(--line);
     }
 
     footer{
       background:var(--cream);
       padding:22px 5.5vw;
-      color:#777f7b;
+      color:#9b938a;
       font-size:9px;
       line-height:1.5;
       text-align:center;
+    }
+
+
+    .card-image{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .feature-photo{
+      width:100%;
+      height:430px;
+      object-fit:cover;
+      display:block;
+      margin:55px auto 0;
+      border-radius:3px;
+    }
+
+    .image-caption{
+      margin-top:10px;
+      font-size:11px;
+      color:#9b938a;
+      text-align:right;
+    }
+
+    .photo-strip{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-top:55px;
+    }
+
+    .photo-strip img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+      display:block;
+      border-radius:3px;
+    }
+
+    @media(max-width:800px){
+      .feature-photo{height:300px;}
+      .photo-strip{grid-template-columns:1fr;}
+      .photo-strip img{height:260px;}
+    }
+
+    @media(max-width:500px){
+      .card-image{height:190px;}
     }
 
     @media(max-width:800px){
@@ -470,7 +522,7 @@
       }
 
       h1{
-        font-size:41px;
+        font-size:46px;
       }
 
       .cards{
@@ -497,7 +549,7 @@
       }
 
       h1{
-        font-size:36px;
+        font-size:39px;
       }
 
       .name-row{
@@ -509,6 +561,23 @@
         padding:22px;
       }
     }
+    /* Final softer cream styling */
+    body{font-size:17px;}
+    h1{font-size:72px;}
+    h2{font-size:44px;}
+    h3{font-size:25px;}
+    .hero-copy{font-size:20px;}
+    .section-text,.card p,.example p,.budget ul,.question,.step{font-size:17px;}
+    .card h3{font-family:'Cormorant Garamond', serif; font-size:25px; font-weight:600;}
+    .topbar,.eyebrow{font-size:12px;}
+    .fineprint, footer{font-size:11px;}
+    label{font-size:13px;}
+    .consent label{font-size:11px;}
+    .contact p,.contact-info{font-size:17px;}
+    .dark,.contact{background:var(--cream2); color:var(--ink);}
+    .dark h2,.dark h3,.contact h2{color:var(--ink);}
+    .dark .section-text,.dark p,.contact p,.contact-info{color:var(--muted);}
+
   </style>
 </head>
 
@@ -570,7 +639,7 @@
 
         <div class="cards">
           <div class="card">
-            <div class="card-top">MICHIGAN PROPERTY TAXES</div>
+            <img class="card-image" src="pexels-photo-8292838.jpg" alt="Calculator and home-buying materials">
             <div class="card-body">
               <h3>Property-tax uncapping</h3>
               <p>Why the seller's current bill may not reflect what you pay after buying the home.</p>
@@ -578,7 +647,7 @@
           </div>
 
           <div class="card">
-            <div class="card-top">DOWN PAYMENT HELP</div>
+            <img class="card-image" src="pexels-photo-8730048.jpg" alt="Home buyers receiving keys">
             <div class="card-body">
               <h3>Down-payment assistance</h3>
               <p>Questions to ask a participating lender about Michigan programs.</p>
@@ -586,7 +655,7 @@
           </div>
 
           <div class="card">
-            <div class="card-top">CLOSING COSTS</div>
+            <img class="card-image" src="pexels-photo-8293750.jpg" alt="People reviewing closing paperwork">
             <div class="card-body">
               <h3>Your closing roadmap</h3>
               <p>A practical path from pre-approval to the paperwork after closing.</p>
@@ -594,6 +663,9 @@
           </div>
         </div>
       </div>
+
+      <img class="feature-photo" src="pexels-photo-8730048.jpg" alt="Home buyers receiving keys">
+      <div class="image-caption">The goal is to understand your budget before you start shopping.</div>
     </section>
 
 
@@ -705,6 +777,16 @@
           <div class="step"><span class="number">07</span><span>Get inspections and consider radon, sewer line, lead paint, or foundation checks when appropriate.</span></div>
           <div class="step"><span class="number">08</span><span>Review the Seller's Disclosure Statement.</span></div>
           <div class="step"><span class="number">09</span><span>Complete appraisal, underwriting, final walk-through, and closing.</span></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="narrow">
+        <div class="photo-strip">
+          <img src="pexels-photo-8292838.jpg" alt="Calculator and home-buying materials">
+          <img src="pexels-photo-8293750.jpg" alt="People reviewing home closing paperwork">
         </div>
       </div>
     </section>
