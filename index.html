@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -452,8 +453,9 @@
 
     .card-image{
       width:100%;
-      height:220px;
-      object-fit:cover;
+      height:180px;
+      object-fit:contain;
+      background:#f6f1e9;
       display:block;
     }
 
@@ -495,7 +497,7 @@
     }
 
     @media(max-width:500px){
-      .card-image{height:175px;}
+      .card-image{height:145px;}
     }
 
     @media(max-width:800px){
@@ -638,7 +640,7 @@
 
         <div class="cards">
           <div class="card">
-            <img src="calculator.jpg" alt="Calculator and home-buying materials">
+            <img class="card-image" src="calculator.jpg" alt="Calculator and home-buying materials">
             <div class="card-body">
               <h3>Property-tax uncapping</h3>
               <p>Why the seller's current bill may not reflect what you pay after buying the home.</p>
@@ -646,7 +648,7 @@
           </div>
 
           <div class="card">
-            <img src="keys.jpg" alt="Home buyers receiving keys">
+            <img class="card-image" src="keys.jpg" alt="Home buyers receiving keys">
             <div class="card-body">
               <h3>Down-payment assistance</h3>
               <p>Questions to ask a participating lender about Michigan programs.</p>
@@ -654,7 +656,7 @@
           </div>
 
           <div class="card">
-            <img src="closing.jpg" alt="People reviewing closing paperwork">
+            <img class="card-image" src="closing.jpg" alt="People reviewing closing paperwork">
             <div class="card-body">
               <h3>Your closing roadmap</h3>
               <p>A practical path from pre-approval to the paperwork after closing.</p>
